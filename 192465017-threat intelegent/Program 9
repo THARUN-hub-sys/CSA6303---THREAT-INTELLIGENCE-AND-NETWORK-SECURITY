@@ -1,0 +1,20 @@
+activity = input("Enter activity: ").lower()
+
+if "requirement" in activity:
+    print("Direction")
+
+elif "collect" in activity:
+    print("Collection")
+
+elif "process" in activity:
+    print("Processing")
+
+elif "analyze" in activity:
+    print("Analysis")
+
+elif "share" in activity:
+    print("Dissemination")
+
+else:
+    print("Feedback")
+    
