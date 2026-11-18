@@ -1,0 +1,16 @@
+import socket
+
+host = input("Enter target IP: ")
+
+for port in [21, 22, 80, 443]:
+    s = socket.socket()
+    s.settimeout(1)
+
+    result = s.connect_ex((host, port))
+
+    if result == 0:
+        print(port, "OPEN")
+    else:
+        print(port, "CLOSED")
+
+    s.close()
