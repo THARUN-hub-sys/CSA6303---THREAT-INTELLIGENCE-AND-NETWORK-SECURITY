@@ -1,0 +1,21 @@
+import hashlib
+
+records = ["Evidence Collected",
+           "Evidence Transferred",
+           "Evidence Stored"]
+
+previous = "GENESIS"
+
+for record in records:
+    data = previous + record
+
+    current = hashlib.sha256(
+        data.encode()
+    ).hexdigest()
+
+    print("Record:", record)
+    print("Hash:", current)
+
+    previous = current
+
+print("Chain Verified")
