@@ -1,0 +1,11 @@
+connection = input("Enter connection type: ").lower()
+
+if connection == "outbound":
+    print("Connection Allowed")
+    print("Return Traffic Allowed")
+
+elif connection == "return":
+    print("Return Traffic Allowed")
+
+else:
+    print("Unsolicited Traffic Blocked")
