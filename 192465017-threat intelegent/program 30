@@ -1,0 +1,10 @@
+firewall = ["192.168.1.5"]
+windows = ["192.168.1.5"]
+vpn = ["192.168.1.5"]
+
+for ip in firewall:
+    if ip in windows and ip in vpn:
+        print("Brute Force Attack Detected")
+        print("Suspicious IP:", ip)
+    else:
+        print("No Attack")
