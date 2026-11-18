@@ -1,0 +1,13 @@
+control = input("Enter security control: ").lower()
+
+if "employee" in control or "training" in control:
+    print("People Controls")
+
+elif "building" in control or "door" in control:
+    print("Physical Controls")
+
+elif "firewall" in control or "encryption" in control:
+    print("Technological Controls")
+
+else:
+    print("Organizational Controls")
