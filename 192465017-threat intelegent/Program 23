@@ -1,0 +1,13 @@
+trusted = ["192.168.1.1"]
+
+ip = input("Enter source IP: ")
+traffic = input("Enter traffic: ").lower()
+
+if ip in trusted:
+    print("Trusted Source - Allowed")
+
+elif "attack" in traffic:
+    print("Malicious Traffic Blocked")
+
+else:
+    print("Traffic Allowed")
