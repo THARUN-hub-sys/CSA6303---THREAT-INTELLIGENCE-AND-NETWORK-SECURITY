@@ -1,0 +1,24 @@
+firewall = True
+antivirus = False
+mfa = True
+encryption = False
+
+if firewall:
+    print("Firewall: PASS")
+else:
+    print("Firewall: FAIL")
+
+if antivirus:
+    print("Antivirus: PASS")
+else:
+    print("Antivirus: FAIL")
+
+if mfa:
+    print("MFA: PASS")
+else:
+    print("MFA: FAIL")
+
+if encryption:
+    print("Encryption: PASS")
+else:
+    print("Encryption: FAIL")
