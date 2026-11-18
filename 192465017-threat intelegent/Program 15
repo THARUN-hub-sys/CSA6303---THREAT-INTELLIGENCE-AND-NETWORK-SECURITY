@@ -1,0 +1,16 @@
+incident = input("Enter incident description: ").lower()
+
+if "phishing" in incident:
+    print("Phishing Attack")
+
+elif "unpatched" in incident:
+    print("Unpatched Vulnerability")
+
+elif "misconfiguration" in incident:
+    print("Misconfiguration")
+
+elif "employee" in incident:
+    print("Insider Threat")
+
+else:
+    print("Supply Chain Compromise")
