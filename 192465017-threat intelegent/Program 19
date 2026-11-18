@@ -1,0 +1,15 @@
+logs = [
+    "login success",
+    "login failed",
+    "login failed",
+    "download success"
+]
+
+count = 0
+
+for log in logs:
+    if "failed" in log:
+        print(log)
+        count += 1
+
+print("Total Failed Logins:", count)
