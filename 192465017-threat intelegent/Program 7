@@ -1,0 +1,17 @@
+logs = [
+    "user=alice status=success",
+    "user=bob status=failed",
+    "user=ram status=success"
+]
+
+success = 0
+failed = 0
+
+for log in logs:
+    if "success" in log:
+        success += 1
+    elif "failed" in log:
+        failed += 1
+
+print("Total Success:", success)
+print("Total Failed:", failed)
