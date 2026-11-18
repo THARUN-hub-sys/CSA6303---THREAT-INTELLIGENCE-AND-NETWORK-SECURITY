@@ -1,0 +1,16 @@
+attack = input("Enter attack description: ").lower()
+
+if "phishing" in attack:
+    print("Phishing")
+
+elif "ddos" in attack or "denial" in attack:
+    print("DoS/DDoS")
+
+elif "malware" in attack:
+    print("Malware")
+
+elif "intercept" in attack:
+    print("Man-in-the-Middle")
+
+else:
+    print("Unknown Threat")
