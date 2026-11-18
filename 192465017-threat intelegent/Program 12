@@ -1,0 +1,13 @@
+alert = input("Enter alert: ").lower()
+
+if "ransomware" in alert:
+    print("P1 - Critical")
+
+elif "malware" in alert:
+    print("P2 - High")
+
+elif "suspicious login" in alert:
+    print("P3 - Medium")
+
+else:
+    print("P4 - Low")
