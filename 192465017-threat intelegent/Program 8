@@ -1,0 +1,10 @@
+segment = input("Enter segment: ").lower()
+
+if segment == "admin":
+    print("Access Allowed")
+
+elif segment == "employee":
+    print("Limited Access")
+
+else:
+    print("Access Blocked")
