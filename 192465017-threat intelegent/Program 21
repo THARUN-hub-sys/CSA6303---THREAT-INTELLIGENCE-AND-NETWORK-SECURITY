@@ -1,0 +1,8 @@
+report = input("Enter incident report: ").lower()
+
+areas = ["patch", "awareness", "monitoring",
+         "backup", "access control"]
+
+for area in areas:
+    if area in report:
+        print("Improvement Area:", area)
