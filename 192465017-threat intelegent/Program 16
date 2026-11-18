@@ -1,0 +1,12 @@
+layers = ["Firewall", "IDS", "Antivirus", "MFA"]
+
+for layer in layers:
+    print(layer, "Checking...")
+
+    status = input("Pass? yes/no: ").lower()
+
+    if status == "no":
+        print("Attack Blocked by", layer)
+        break
+else:
+    print("All Security Layers Passed")
