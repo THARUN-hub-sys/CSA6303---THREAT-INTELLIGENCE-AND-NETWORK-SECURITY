@@ -1,0 +1,9 @@
+protocol = input("Enter protocol: ").upper()
+port = int(input("Enter port: "))
+content = input("Enter packet content: ")
+
+if protocol == "TCP" and port == 80 and "attack" in content:
+    print("IDS ALERT: Malicious Traffic")
+
+else:
+    print("Normal Traffic")
