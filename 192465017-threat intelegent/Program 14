@@ -1,0 +1,13 @@
+events = [
+    "firewall blocked",
+    "windows failed login",
+    "vpn failed login"
+]
+
+print("Collecting Events")
+
+for event in events:
+    print("Normalized:", event)
+
+if events.count("vpn failed login") > 0:
+    print("SIEM ALERT GENERATED")
