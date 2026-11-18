@@ -1,0 +1,15 @@
+logs = [
+    "FAIL",
+    "FAIL",
+    "FAIL",
+    "SUCCESS"
+]
+
+failed = 0
+
+for log in logs:
+    if log == "FAIL":
+        failed += 1
+
+    elif log == "SUCCESS" and failed >= 3:
+        print("Brute Force Attack Detected")
