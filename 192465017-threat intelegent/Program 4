@@ -1,0 +1,10 @@
+text = input("Enter report description: ").lower()
+
+if "executive" in text or "strategy" in text:
+    print("Strategic Intelligence")
+
+elif "tactics" in text or "techniques" in text:
+    print("Tactical Intelligence")
+
+else:
+    print("Operational Intelligence")
