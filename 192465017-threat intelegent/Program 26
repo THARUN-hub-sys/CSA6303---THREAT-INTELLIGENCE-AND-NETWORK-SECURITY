@@ -1,0 +1,19 @@
+import hashlib
+
+sample = b"malware sample"
+
+hash_value = hashlib.sha256(sample).hexdigest()
+
+print("Static Analysis")
+print("SHA256:", hash_value)
+
+print("Dynamic Analysis")
+
+behaviors = [
+    "File modification",
+    "Registry modification",
+    "Network connection"
+]
+
+for behavior in behaviors:
+    print("Detected:", behavior)
