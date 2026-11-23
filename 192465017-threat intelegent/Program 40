@@ -1,0 +1,16 @@
+task = input("Enter security task: ").lower()
+
+if "network" in task or "scan" in task:
+    print("Recommended Tool: Nmap")
+
+elif "packet" in task:
+    print("Recommended Tool: Wireshark")
+
+elif "malware" in task or "virus" in task:
+    print("Recommended Tool: ClamAV")
+
+elif "logs" in task:
+    print("Recommended Tool: Splunk")
+
+else:
+    print("No suitable tool found")
