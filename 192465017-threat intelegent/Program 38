@@ -1,0 +1,28 @@
+import time
+
+events = [
+    ("alice", "success"),
+    ("bob", "fail"),
+    ("bob", "fail"),
+    ("bob", "fail"),
+    ("alice", "success")
+]
+
+failures = {}
+threshold = 3
+
+print("Monitoring login events...")
+
+for user, status in events:
+    print("Event:", user, status)
+
+    if status == "fail":
+        failures[user] = failures.get(user, 0) + 1
+
+        if failures[user] >= threshold:
+            print("ALERT: Suspicious login activity:", user)
+
+    else:
+        failures[user] = 0
+
+print("Monitoring completed.")
