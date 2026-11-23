@@ -1,0 +1,15 @@
+iocs = ["192.168.1.10", "badfile.exe", "evil.com"]
+
+logs = [
+    "Login from 192.168.1.10",
+    "File badfile.exe found"
+]
+
+print("Threat Intelligence Platform")
+
+for ioc in iocs:
+    ioc = ioc.lower()
+
+    for log in logs:
+        if ioc in log.lower():
+            print("ALERT:", ioc, "detected in", log)
