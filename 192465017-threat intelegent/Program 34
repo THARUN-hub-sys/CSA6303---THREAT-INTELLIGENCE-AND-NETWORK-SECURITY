@@ -1,0 +1,23 @@
+events = [
+    {"ip": "10.0.0.5", "event": "failed_login", "count": 8},
+    {"ip": "10.0.0.8", "event": "normal_login", "count": 1},
+    {"ip": "10.0.0.9", "event": "connection", "count": 12}
+]
+
+malicious_ips = {"10.0.0.5"}
+threshold = 10
+
+print("Hypothesis-Based Hunting:")
+for e in events:
+    if e["event"] == "failed_login":
+        print("Investigate:", e["ip"])
+
+print("\nIntelligence-Based Hunting:")
+for e in events:
+    if e["ip"] in malicious_ips:
+        print("Threat intelligence match:", e["ip"])
+
+print("\nAnalytics-Based Hunting:")
+for e in events:
+    if e["count"] > threshold:
+        print("Anomalous activity:", e["ip"])
