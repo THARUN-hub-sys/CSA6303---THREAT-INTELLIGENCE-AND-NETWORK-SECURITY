@@ -1,0 +1,22 @@
+description = input("Describe the system or data: ").lower()
+
+if any(word in description for word in
+       ["credit card", "payment card", "cardholder"]):
+    standard = "PCI-DSS"
+
+elif any(word in description for word in
+         ["patient", "medical record", "health information"]):
+    standard = "HIPAA"
+
+elif any(word in description for word in
+         ["personal data", "eu citizen", "data subject"]):
+    standard = "GDPR"
+
+elif any(word in description for word in
+         ["financial report", "internal controls", "public company"]):
+    standard = "SOX"
+
+else:
+    standard = "No clear match; further assessment required"
+
+print("Likely Standard:", standard)
