@@ -1,0 +1,23 @@
+role_permissions = {
+    "Admin": {"read", "write", "delete"},
+    "Analyst": {"read", "write"},
+    "Viewer": {"read"}
+}
+
+users = [
+    {"name": "Alice", "role": "Analyst",
+     "permissions": {"read", "write"}},
+    {"name": "Bob", "role": "Viewer",
+     "permissions": {"read", "delete"}},
+    {"name": "David", "role": "Admin",
+     "permissions": {"read", "write", "delete"}}
+]
+
+for user in users:
+    required = role_permissions[user["role"]]
+    excess = user["permissions"] - required
+
+    if excess:
+        print(user["name"], "- Excess access:", excess)
+    else:
+        print(user["name"], "- Permissions OK")
